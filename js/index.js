@@ -37,6 +37,19 @@ const siteContent = {
   },
 };
 
+// Create Selectors
+
+const navItem = document.getElementsByTagName('a')
+navItem[0].textContent = 'Services'
+navItem[1].textContent = 'Product'
+navItem[2].textContent = 'Vision'
+navItem[3].textContent = 'Features'
+navItem[4].textContent = 'About'
+navItem[5].textContent = 'Contact'
+
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
