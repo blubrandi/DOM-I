@@ -40,12 +40,14 @@ const siteContent = {
 // Create Selectors
 
 const navItem = document.getElementsByTagName('a')
-navItem[0].textContent = 'Services'
-navItem[1].textContent = 'Product'
-navItem[2].textContent = 'Vision'
-navItem[3].textContent = 'Features'
-navItem[4].textContent = 'About'
-navItem[5].textContent = 'Contact'
+navItem[0].innerHTML = siteContent['nav']['nav-item-1']
+navItem[1].innerHTML = siteContent['nav']['nav-item-2']
+navItem[2].innerHTML = siteContent['nav']['nav-item-3']
+navItem[3].innerHTML = siteContent['nav']['nav-item-4']
+navItem[4].innerHTML = siteContent['nav']['nav-item-5']
+navItem[5].innerHTML = siteContent['nav']['nav-item-6']
+
+const h1 = document.querySelector('h1').innerHTML 
 
 
 // Example: Update the img src for the logo
