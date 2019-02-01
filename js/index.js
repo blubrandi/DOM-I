@@ -37,6 +37,53 @@ const siteContent = {
   },
 };
 
+// Create Selectors
+
+const navItem = document.getElementsByTagName('a')
+navItem[0].innerHTML = siteContent['nav']['nav-item-1']
+navItem[1].innerHTML = siteContent['nav']['nav-item-2']
+navItem[2].innerHTML = siteContent['nav']['nav-item-3']
+navItem[3].innerHTML = siteContent['nav']['nav-item-4']
+navItem[4].innerHTML = siteContent['nav']['nav-item-5']
+navItem[5].innerHTML = siteContent['nav']['nav-item-6']
+
+const h1 = document.querySelector('h1')
+h1.innerHTML = siteContent['cta']['h1']
+
+const ctaButton = document.querySelector('button')
+ctaButton.innerHTML = siteContent['cta']['button']
+
+const ctaImg = document.getElementById('cta-img')
+ctaImg.setAttribute('src', siteContent['cta']['img-src'])
+
+const featureHeading = document.getElementsByTagName('h4')
+featureHeading[0].innerHTML = siteContent['main-content']['features-h4']
+featureHeading[1].innerHTML = siteContent['main-content']['about-h4']
+featureHeading[2].innerHTML = siteContent['main-content']['services-h4']
+featureHeading[3].innerHTML = siteContent['main-content']['product-h4']
+featureHeading[4].innerHTML = siteContent['main-content']['vision-h4']
+
+const midImg = document.getElementById('middle-img')
+midImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+const content = document.getElementsByTagName('p')
+content[0].innerHTML = siteContent['main-content']['features-content']
+content[1].innerHTML = siteContent['main-content']['about-content']
+content[2].innerHTML = siteContent['main-content']['services-content']
+content[3].innerHTML = siteContent['main-content']['product-content']
+content[4].innerHTML = siteContent['main-content']['vision-content']
+content[5].innerHTML = siteContent['contact']['address']
+content[6].innerHTML = siteContent['contact']['phone']
+content[7].innerHTML = siteContent['contact']['email']
+content[8].innerHTML = siteContent['footer']['copyright']
+
+const contactHeading = document.getElementsByTagName('h4')
+contactHeading[5].innerHTML = siteContent['contact']['contact-h4']
+
+
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
