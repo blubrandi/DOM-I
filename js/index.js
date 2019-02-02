@@ -47,6 +47,29 @@ navItem[3].innerHTML = siteContent['nav']['nav-item-4']
 navItem[4].innerHTML = siteContent['nav']['nav-item-5']
 navItem[5].innerHTML = siteContent['nav']['nav-item-6']
 
+navItem[0].style.color = 'green'
+navItem[1].style.color = 'green'
+navItem[2].style.color = 'green'
+navItem[3].style.color = 'green'
+navItem[4].style.color = 'green'
+navItem[5].style.color = 'green'
+
+const headerNav = document.querySelector('nav')
+
+const newNavItem1 = document.createElement('a')
+newNavItem1.href = '#'
+newNavItem1.textContent = 'Home'
+
+headerNav.prepend(newNavItem1)
+newNavItem1.style.color = 'green'
+
+const newNavItem2 = document.createElement('a')
+newNavItem2.href = '#'
+newNavItem2.textContent = 'Pricing'
+
+headerNav.appendChild(newNavItem2)
+newNavItem2.style.color = 'green'
+
 const h1 = document.querySelector('h1')
 h1.innerHTML = siteContent['cta']['h1']
 
