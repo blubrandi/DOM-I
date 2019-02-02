@@ -39,36 +39,27 @@ const siteContent = {
 
 // Create Selectors
 
-const navItem = document.getElementsByTagName('a')
-navItem[0].innerHTML = siteContent['nav']['nav-item-1']
-navItem[1].innerHTML = siteContent['nav']['nav-item-2']
-navItem[2].innerHTML = siteContent['nav']['nav-item-3']
-navItem[3].innerHTML = siteContent['nav']['nav-item-4']
-navItem[4].innerHTML = siteContent['nav']['nav-item-5']
-navItem[5].innerHTML = siteContent['nav']['nav-item-6']
-
-navItem[0].style.color = 'green'
-navItem[1].style.color = 'green'
-navItem[2].style.color = 'green'
-navItem[3].style.color = 'green'
-navItem[4].style.color = 'green'
-navItem[5].style.color = 'green'
-
 const headerNav = document.querySelector('nav')
+const navItem = document.querySelectorAll('a')
+const navArr = Array.from(navItem)
+
+for (let i=0; i<navArr.length; i++) {
+  navArr[i].textContent = siteContent['nav'][`nav-item-${i + 1}`]
+  navArr[i].style.color = 'green'
+
+}
 
 const newNavItem1 = document.createElement('a')
-newNavItem1.href = '#'
-newNavItem1.textContent = 'Home'
+  newNavItem1.href = '#'
+  newNavItem1.textContent = 'Home'
 
-headerNav.prepend(newNavItem1)
-newNavItem1.style.color = 'green'
+  headerNav.prepend(newNavItem1)
 
-const newNavItem2 = document.createElement('a')
-newNavItem2.href = '#'
-newNavItem2.textContent = 'Pricing'
+  const newNavItem2 = document.createElement('a')
+  newNavItem2.href = '#'
+  newNavItem2.textContent = 'Pricing'
 
-headerNav.appendChild(newNavItem2)
-newNavItem2.style.color = 'green'
+  headerNav.appendChild(newNavItem2)
 
 const h1 = document.querySelector('h1')
 h1.innerHTML = siteContent['cta']['h1']
