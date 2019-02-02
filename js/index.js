@@ -43,23 +43,25 @@ const headerNav = document.querySelector('nav')
 const navItem = document.querySelectorAll('a')
 const navArr = Array.from(navItem)
 
-for (let i=0; i<navArr.length; i++) {
-  navArr[i].textContent = siteContent['nav'][`nav-item-${i + 1}`]
-  navArr[i].style.color = 'green'
-
-}
-
 const newNavItem1 = document.createElement('a')
   newNavItem1.href = '#'
   newNavItem1.textContent = 'Home'
+  newNavItem1.style.color = 'green'
 
   headerNav.prepend(newNavItem1)
 
   const newNavItem2 = document.createElement('a')
   newNavItem2.href = '#'
   newNavItem2.textContent = 'Pricing'
+  newNavItem2.style.color = 'green'
 
   headerNav.appendChild(newNavItem2)
+
+for (let i=0; i<navArr.length; i++) {
+  navArr[i].textContent = siteContent['nav'][`nav-item-${i+1}`]
+  navArr[i].style.color = 'green'
+}
+
 
 const h1 = document.querySelector('h1')
 h1.innerHTML = siteContent['cta']['h1']
